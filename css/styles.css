@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+:root {
+    --LT-Gray: hsla(0, 0%, 95%, 1);
+    --Grayish: hsla(0, 0%, 88%, 1);
+    --Gray: hsla(0, 0%, 51%, 1);
+    --CL-Text: hsla(160, 2%, 31%, 1);
+    --DK-Gray: hsla(0, 0%, 20%, 1);
+    --Orange: hsla(28, 87%, 62%, 1);
+    --White: hsl(0, 0%, 100%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding: 5rem 3vw 15rem;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+/* ===============**--       UTILITYS CLASSES        --**===============*/
+.flexbox {
+    display: flex;
+}
+
+/* ===============**--       MAIN        --**===============*/
+.main {
+    color: var(--CL-Text);
+}
+
+.title {
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    line-height: clamp(2.9rem, 4vh, 4.4rem);
+    margin-bottom: 2rem;
+}
+
+/* ===============**--       SHOPPING-PRODUCTS        --**===============*/
+.shopping-details {
+    background-color: var(--LT-Gray);
+    border-radius: 1.2rem;
+    margin-bottom: 4rem;
+    padding: 3rem 5vw 1rem;
+}
+
+.product {
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.picture-article {
+    border-radius: 2rem;
+    max-width: 12rem;
+}
+
+.article-info {
+    flex: 1;
+}
+
+.aricle-info__name {
+    font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+    line-height: clamp(1.5rem, 3vh, 2rem);
+    margin-bottom: 1rem;
+}
+
+.price {
+    margin-bottom: 3rem;
+}
+
+.price__reduction {
+    color: var(--Orange);
+    font-size: clamp(1.6rem, 1.5vw, 1.4rem);
+    line-height: clamp(1.7rem, 2vh, 2rem);
+    margin-right: 1.5rem;
+}
+
+.price__real {
+    font-size: clamp(1rem, 1vw, 1.2rem);
+    line-height: clamp(1.2rem, 1.1vh, 1.5rem);
+}
+
+.amount {
+    align-items: center;
+    border: .1rem solid hsla(0, 0%, 51%, 1);
+    border-radius: 1.2rem;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+    width: min(14rem, 100%);
+}
+
+.btn {
+    border-radius: .4rem;
+    background-color: var(--Grayish);
+    color: var(--Gray);
+    width: 2rem;
+}
+
+.counter {
+    color: var(--DK-Gray);
+    margin: 0;
+}
+
+.account {
+    margin-top: 6rem;
+}
+
+.account__text {
+    border-top: .1rem solid hsla(0, 0%, 74%, 1);
+    color: var(--DK-Gray);
+    font-size: clamp(1.4rem, 1.4vw, 1.8rem);
+    justify-content: space-between;
+    line-height: clamp(1.7rem, 2vh, 2.2rem);
+    margin: 0;
+    padding: 1.2rem 0;
+}
+
+.account__text:last-child {
+    padding-top: 2rem;
+}
+
+.account__value {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+}
+
+/* ===============**--       FORM-CONTACT        --**===============*/
+.contact {
+    margin-bottom: 4rem;
+}
+
+.form__title {
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    line-height: clamp(1.7rem, 2vh, 2.2rem);
+    margin-bottom: 1.4rem;
+}
+
+.form-group {
+    margin-bottom: 1.8rem;
+}
+
+.form-group__label {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: clamp(1.2rem, 2vh, 1.5rem);
+    display: block;
+    position: relative;
+}
+
+.form-group__label::before {
+    background: no-repeat center / cover;
+    content: "";
+    display: block;
+    height: 2rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    width: 2rem;
+    z-index: 200;
+}
+
+.form-group__label--email::before {
+    background-image: url(../assets/icons/email.svg);
+}
+
+.form-group__label--phone::before {
+    background-image: url(../assets/icons/phone.svg);
+}
+
+.form-group__label--fullname::before {
+    background-image: url(../assets/icons/account.svg);
+}
+
+.form-group__label--address::before {
+    background-image: url(../assets/icons/home.svg);
+}
+
+.form-group__label--city::before,
+.form-group__label--country::before {
+    background-image: url(../assets/icons/city.svg);
+}
+
+.form-group__label--ptcode::before {
+    background-image: url(../assets/icons/postal-code.svg);
+    bottom: 1.5rem;
+}
+
+.form-group__input,
+.form-group__select {
+    border: .1rem solid var(--Gray);
+    border-radius: 1.2rem;
+    margin-top: .5rem;
+    padding: 1.2rem 1rem 1.2rem 4rem;
+    width: 100%;
+}
+
+.form-group__input::placeholder {
+    font-size: clamp(1.2rem, 1.4vw, 1.6rem);
+    line-height: clamp(1.5rem, 3vh, 2rem);
+}
+
+.form-group__input:focus {
+    outline: none;
+}
+
+.form-group--location {
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.form-group__label--country,
+.form-group__label--ptcode {
+    flex: 1;
+}
+
+.form-group__select {
+    cursor: pointer;
+    font-size: clamp(1.2rem, 1.4vw, 1.6rem);
+    line-height: clamp(1.5rem, 3vh, 2rem);
+    outline: 0;
+    position: relative;
+}
+
+.arrow {
+    background-color: hsl(0, 0%, 88%);
+    border-radius: .4rem;
+    display: block;
+    padding: 1rem;
+    position: absolute;
+    top: 60%;
+    right: 1rem;
+    transform: translateY(-40%);
+}
+
+.arrow::after {
+    border-left: .1rem solid hsl(0, 0%, 51%);
+    border-bottom: .1rem solid hsl(0, 0%, 51%);
+    content: '';
+    display: block;
+    height: .7rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: .7rem;
+}
+
+.form-group__save {
+    align-items: center;
+    font-size: clamp(1rem, 1vw, 1.2rem);
+    gap: 1rem;
+    line-height: clamp(1.2rem, 2vh, 1.5rem);
+    margin-bottom: 2.5rem;
+}
+
+.form__submit {
+    appearance: none;
+    background-color: var(--Orange);
+    border: none;
+    border-radius: 1.2rem;
+    color: var(--White);
+    display: block;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-left: auto;
+    margin-right: 0;
+    outline: none;
+    padding: 1.54rem;
+    width: 16.6rem;
+}
+
+
+@media screen and (min-width: 768px) {
+    body {
+        padding-right: 10vw;
+        padding-left: 10vw;
+    }
+
+    .shopping-details {
+        padding-left: 8vw;
+        padding-right: 8vw;
+    }
+
+    .product {
+        gap: 7rem;
+    }
+
+    .title,
+    .contact {
+        margin-bottom: 5rem;
+    }
+
+    .main {
+        margin: 0 auto;
+        max-width: 50rem;
+    }
+
+    .form__title {
+        margin-bottom: 2.4rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    .main {
+        position: relative;
+        max-width: 100rem;
+    }
+
+    .shopping-details {
+        padding-left: 3.5rem;
+        padding-right: 4vw;
+        position: absolute;
+        right: 0;
+        z-index: 200;
+    }
+
+    .product {
+        gap: 2rem;
+    }
+
+    .shopping-details {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .form {
+        max-width: 48%;
+    }
+}

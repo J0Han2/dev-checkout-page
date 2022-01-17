@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/devchallenges.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>Checkout Page </title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <main class="main">
+        <h1 class="title">Checkout</h1>
+        <section class="shopping-details">
+            <div class="product flexbox">
+                <img src="assets/images/photo1.png" alt="vintage backbag" class="picture-article">
+                <div class="article-info">
+                    <h3 class="aricle-info__name">Vintage Backbag</h3>
+                    <p class="price">
+                        <span class="price__reduction">$54.99</span>
+                        <span class="price__real">$94.99</span>
+                    </p>
+                    <div class="amount flexbox">
+                        <a href="#" class="btn btn--decrease">
+                            <img src="assets/icons/remove.svg" alt="icon add" class="btn__icon">
+                        </a>
+                        <h2 class="counter">1</h2>
+                        <a href="#" class="btn btn--increase">
+                            <img src="assets/icons/add.svg" alt="icon add" class="btn__icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="product flexbox">
+                <img src="assets/images/photo2.png" alt="navy blue Levi shoes in the heel" class="picture-article">
+                <div class="article-info">
+                    <h3 class="aricle-info__name">Levi Shoes</h3>
+                    <p class="price">
+                        <span class="price__reduction">$74.99</span>
+                        <span class="price__real">$124.99</span>
+                    </p>
+                    <div class="amount flexbox">
+                        <a href="#" class="btn btn--decrease">
+                            <img src="assets/icons/remove.svg" alt="icon remove" class="btn__icon">
+                        </a>
+                        <h2 class="counter">1</h2>
+                        <a href="#" class="btn btn--increase">
+                            <img src="assets/icons/add.svg" alt="icon remove" class="btn__icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="account">
+                <p class="account__text flexbox">Shipping
+                    <span class="account__value">$19</span>
+                </p>
+                <p class="account__text flexbox">Total
+                    <span class="account__value">$148.98</span>
+                </p>
+            </div>
+        </section>
+
+        <form class="form">
+            <div class="contact">
+                <h2 class="form__title">Contact infomation</h2>
+                <div class="form-group">
+                    <label for="email" class="form-group__label form-group__label--email">E-mail
+                        <input type="email" name="email" id="email" class="form-group__input"
+                            placeholder="Enter your email..." required>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="phone" class="form-group__label form-group__label--phone">Phone
+                        <input type="tel" name="phone" id="phone" class="form-group__input"
+                            placeholder="Enter your phone..." required>
+                    </label>
+                </div>
+            </div>
+
+            <div class="address">
+                <h2 class="form__title">Shipping address</h2>
+                <div class="form-group">
+                    <label for="full-name" class="form-group__label form-group__label--fullname">Full name
+                        <input type="text" name="full-name" id="full-name" class="form-group__input"
+                            placeholder="Your full name.." required value="Rodney Cotton">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="address" class="form-group__label form-group__label--address">Address
+                        <input type="text" name="address" id="address" class="form-group__input"
+                            placeholder="Your address.." required>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="city" class="form-group__label form-group__label--city">City
+                        <input type="text" name="city" id="city" class="form-group__input" placeholder="Your city.."
+                            required>
+                    </label>
+                </div>
+                <div class="form-group form-group--location flexbox">
+                    <label for="country" class="form-group__label form-group__label--country">Country
+                        <select name="country" id="country" class="form-group__select" required>
+                            <option value=""> Your Contry</option>
+                            <option value="USA">USA-united states</option>
+                            <option value="México">México</option>
+                            <option value="canada">Canada</option>
+                            <option value="Spain">Spain</option>
+                            <option value="Germany">Germany</option>
+                        </select>
+                        <span class="arrow"></span>
+                    </label>
+                    <label for="postal-code" class="form-group__label form-group__label--ptcode">Postal code
+                        <input type="text" name="postal-code" id="postal-code" class="form-group__input"
+                            placeholder="Your postal code..">
+                    </label>
+                </div>
+            </div>
+
+            <label for="save-info" class=" form-group__save flexbox">
+                <input type="checkbox" name="save-info" id="save-info" class="form-group__checkbox">
+                Save this information for next time
+            </label>
+            <button type="submit" class="form__submit">Continue</button>
+        </form>
+    </main>
+
+</body>
+
+</html>
